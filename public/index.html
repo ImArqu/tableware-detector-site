@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10392f"><link rel="icon" href="data:,">
+  <title>Photo detector</title><link rel="stylesheet" href="/style.css">
+  <script defer src="/vendor/ort.wasm.min.js"></script>
+  <script defer src="/detector.js"></script><script defer src="/app.js"></script>
+</head>
+<body>
+  <header><div class="mast"><span class="mark" aria-hidden="true">▣</span><span>Computer vision lab</span></div></header>
+  <main>
+    <h1>Photo detector</h1>
+    <p class="intro">Select a photo to locate objects and read their confidence scores.</p>
+    <div class="workbench">
+      <section class="tools" aria-label="Image and detector controls">
+        <label for="detector">Detector</label><select id="detector" disabled></select>
+        <label for="photo">Your photo</label>
+        <input type="file" id="photo" accept="image/jpeg,image/png,image/webp">
+        <p class="small" id="file-name">JPG, PNG or WebP</p>
+        <p class="label">Try a sample</p>
+        <div id="samples" class="samples"></div>
+        <label for="confidence" class="threshold">Confidence threshold <output id="threshold">25%</output></label>
+        <input type="range" id="confidence" min="5" max="95" step="5" value="25">
+        <button id="detect" class="primary" disabled>Detect objects</button>
+        <p class="status" id="status" role="status" aria-live="polite">Loading detectors…</p>
+      </section>
+      <section class="viewer" aria-label="Preview and detections">
+        <div class="preview" id="preview"><p id="empty">Your photo will appear here.</p><canvas id="result" hidden aria-label="Photo with detection boxes"></canvas></div>
+        <div class="results"><div class="result-heading"><h2>Detections</h2><span id="count">0 objects</span></div><ul id="list"></ul></div>
+      </section>
+    </div>
+    <footer>Photos are processed in this browser.<a href="/credits.html">Photo and software credits</a></footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,29 @@
+[
+  {
+    "id": "spoon",
+    "title": "Spoon",
+    "file": "/models/spoon.onnx",
+    "size": 320,
+    "labels": [
+      "spoon"
+    ]
+  },
+  {
+    "id": "fork",
+    "title": "Fork",
+    "file": "/models/fork.onnx",
+    "size": 320,
+    "labels": [
+      "fork"
+    ]
+  },
+  {
+    "id": "cup",
+    "title": "Cup",
+    "file": "/models/cup.onnx",
+    "size": 320,
+    "labels": [
+      "cup"
+    ]
+  }
+]

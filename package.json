@@ -1,0 +1,7 @@
+{
+  "name": "three-object-detector",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": { "start": "node local.cjs" },
+  "engines": { "node": "24.x" }
+}
